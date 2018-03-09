@@ -1,0 +1,51 @@
+
+// Using YAML 
+
+ gcloud config set project sudip-2018
+ 
+// setting Time Zone
+
+gcloud config set compute/zone us-cental1-b
+
+//  creating clusters
+
+ gcloud container clusters create sudip-rana
+ 
+ gcloud container clusters describe sudip-rana
+ 
+ // collect username , password to connect to Kubernetes UI
+ 
+ kubectl cluster -info 
+ 
+ // collect Kubernetes UI url
+ 
+ kubectl  create -f redis-master-deployment.yaml
+ 
+ kubectl create -f redis-master-service.yaml
+ 
+ kubectl create -f redis-slave-controller.yaml
+ 
+ kubectl get pods
+ 
+ kubectl create -f redis-slave-service.yaml
+ 
+ kubectl get services
+ 
+ kubectl create -f frontend-deployment.yaml
+ 
+ kubectl get rc
+ 
+ kubectl get pods
+ 
+ kubectl create -f frontend-service.yaml
+ 
+ kubectl get services
+ 
+ kubectl describe services frontend
+ 
+ 
+ // cleaning up
+ 
+  kubectl delete services frontend
+  
+  gcloud cotnainer clusters delete sudip-rana

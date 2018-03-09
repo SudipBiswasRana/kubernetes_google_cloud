@@ -1,0 +1,19 @@
+
+ // VM
+ 
+ gcloud compute instances create ubuntu --image -project ubuntu-os-cloud --image
+  ubuntu-1604-xenial-v20160429
+  
+  sudo apt-get update
+  
+  sudo apt install nginx 
+  
+  sudo systemctl start nginx
+  
+  sudo systemctl status nginx
+  
+  curl http://127.0.0.1
+  
+  // <title> Welcome To Nginx </title >  will show up
+
+  

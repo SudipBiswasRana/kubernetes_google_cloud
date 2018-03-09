@@ -1,0 +1,19 @@
+mkdir imageLocation
+
+cd imageLocation
+
+touch Dockerfile
+
+vi Dockerfile
+
+FROM ubuntu:1604
+MAINTAINER "Sudip"
+RUN apt-get update
+RUN git clone https://github.com/SudipBiswasRana/Spring-Dependency-Injection
+RUN echo "Done"
+EXPOSE 80
+
+
+sudo docker build -t="rana/imageLocation"
+
+sudo docker images

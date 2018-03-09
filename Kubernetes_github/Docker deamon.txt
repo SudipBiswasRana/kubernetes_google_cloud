@@ -1,0 +1,30 @@
+
+ // Docker  deamon
+
+ 
+ sudo apt-get install docker.io
+ 
+ sudo docker daemon start
+ 
+ sudo docker daemon enable
+ 
+  gcloud config set project sudip-2018
+  
+ gcloud config set compute/zone us-cental1-b
+   
+ sudo docker login
+ 
+ sudo docker images
+ 
+ sudo docker pull nginx
+ 
+// pushing to gcr
+
+ docker tag wordpress gcr.io/sudip-2018/wordpres
+ 
+ gcloud docker push gcr.io/sudip-2018/wordpress
+ 
+ 
+
+  
+  

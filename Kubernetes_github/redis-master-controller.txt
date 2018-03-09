@@ -1,0 +1,31 @@
+
+
+
+ apiVersion:v1
+ kind : ReplicationController
+ metadata :
+  name : redis-master
+  labels :
+  app : redis
+  role : master
+  tier : backend
+  
+  spec:
+  replicas : 1
+  template :
+  metadata :
+  labels :
+  app : redis
+  role : master
+  tier : backend
+  
+  spec: 
+  containers :
+  - name : master
+    image : k8s.cr.io/redis:e2e 
+	resources :
+	request :
+	cpu : 100 m
+	 meomory: 100 Mi
+	 ports:
+	 -containerPort : 6379

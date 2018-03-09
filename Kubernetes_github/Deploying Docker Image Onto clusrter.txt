@@ -1,0 +1,18 @@
+
+// Out-of-the-box Wordpress docker image
+
+kubectl run wordpress --image=tutum/wordpress --port=80
+
+// expose the pod to the outside world
+
+kubectl expose deployment wordpress --type=LoadBalancer
+
+//get external Ip
+
+ kubectl get services wordpress
+ 
+ // deleting
+ 
+ kubectl delete services wordpress
+ 
+ kubectl delete deployment wordpress  { pod }
